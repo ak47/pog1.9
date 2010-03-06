@@ -155,7 +155,7 @@ class RandomStringGenerator
     end_i = i + @characters.length
     
     until @characters[ i % @characters.length ].ord > 0 do # Walk until you find a non-0 character
-      raise "No more characters. #{end_i} #{i} #{@characters}" if i == end_i
+      raise "No more characters." if i == end_i
       i += 1
     end
     c = @characters[ i % @characters.length ].chr # c is now the character we will return
